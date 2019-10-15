@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   
-   
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculator</title>
-</head>
-<body>
+ </head>
+ <body>
     <center>
-    <input type="number" name="Enter value of 1st number:" placeholder="Enter value of 1st number:"  id="num1">
-    <input type="number" name="Enter value of 2nd number:" placeholder="Enter value of 2nd number:"  id="num2"><br>
-    
-    <button type="button" onclick='add()'>Add</button><br>
-    <button type="button" onclick='subtract()'>Subtract</button><br>
-    <button type="button" onclick='multiply()'>Multiply</button><br>
+    First Number: <input type="number" name="Enter value of 1st number:" placeholder="Enter value of 1st number:"  id="num1"><br>
+    Second number:<input type="number" name="Enter value of 2nd number:" placeholder="Enter value of 2nd number:"  id="num2"><br>
+    <br>
+    <button type="button" onclick='add()'>Add</button>
+    <button type="button" onclick='subtract()'>Subtract</button>
+    <button type="button" onclick='multiply()'>Multiply</button>
     <button type="button" onclick='divide()'>Divide</button><br>
-    <input type="text"  placeholder="Result" value="Result" id="Result"><br>
+    <br>
+    Result:<input type="text" placeholder="Result"  id="Result" readonly ><br>
     <div id="output" ></div>
     <script>
         function add()
         {
         var num1 = Number(document.getElementById("num1").value);
         var num2 = Number(document.getElementById("num2").value);
-        
+
         var result = num1 + num2;
         //If you want to dislay the result in the form of alert windows, then uncomment all the lines with windows.alert() function
         //window.alert(result);
         document.getElementById("Result").value=String(result);
-        
+
         }
 
         function subtract()
         {
         var num1 = Number(document.getElementById("num1").value);
         var num2 = Number(document.getElementById("num2").value);
-        
+
         var result = num1 - num2;
         //window.alert(result);
         document.getElementById("Result").value=String(result);
@@ -50,22 +49,22 @@
 
         //window.alert(result);
         document.getElementById("Result").value=String(result);
-        
+
         }
 
         function divide()
         {
         var num1 = Number(document.getElementById("num1").value);
         var num2 = Number(document.getElementById("num2").value);
-        
+
         var result = num1 / num2;
         document.getElementById("Result").value=String(result);
 
         //window.alert(result);
-        
+
         }
 
-    </script>
+     </script>
     </center>
-</body>
+  </body>
 </html>

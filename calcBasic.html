@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <script></script>
+</head>
+<body>
+    <form name="calc">
+        <label>First number :</label>
+        <input type="text" name="num1">
+        <label>Second Number :</label>
+        <input type="text" name="num2"><br>
+        <br>
+        <label>Result :</label>
+        <input type="text" name="result" placeholder="Result" readonly>
+
+        <input onclick="calc.result.value = Number(calc.num1.value) + Number(calc.num2.value)" value="+" type="button">
+        <input onclick="calc.result.value = Number(calc.num1.value) - Number(calc.num2.value)" value="-" type="button">
+        <input onclick="calc.result.value = Number(calc.num1.value) * Number(calc.num2.value)" value="*" type="button">
+        <input onclick="calc.result.value = Number(calc.num1.value) / Number(calc.num2.value)" value="/" type="button">
+    </form>
+</body>
+</html>
