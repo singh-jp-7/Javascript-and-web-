@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
   <style>
     button{
         background-color: aqua;
         padding: 10px;
         border: black, 4px , solid;
         border-radius: 10px;
-     }
-     #program{
-
+    }
+    #program{
         background-color: blanchedalmond;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif4;
+        font-family:  'Open Sans', 'Helvetica Neue', sans-serif4;
         padding: 10px;
-        margin-top:50px;
         border: brown,4px,solid;
 
-     }
+    }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Greatest Number</title>
- </head>
- <body>
+  </head>
+  <body>
     <center>
         <fieldset id="program" style="border-radius: 10px;width: 25%;">
-    <div>
+
         Enter the first number :<input type="number" name="var1" id="1st" placeholder="1st Number"><br/>
 
         Enter the second number :<input type="number" name="var2" id="2nd" placeholder="2nd Number"><br/>
 
         Enter the third number :<input type="number" name="var3" id="3rd" placeholder="3rd Number"><br/>
 
-        Result : <input type="text" name="result" id="result" placeholder="Result will be displayed here"><br/>
-    </div>
-    <button type="button" onclick="greatest()" >Click to check </button>
+        Result : <input type="text" id="result" placeholder="Result will be displayed here" readonly><br/>
 
-  </fieldset>
-  <script>
+        <button type="button" onclick="greatest()">Click to check </button>
+
+       </fieldset>
+      </center>
+      <script>
         function greatest()
         {
-            var x = document.getElementById('1st').value;
-            var y = document.getElementById('2nd').value;
-            var z = document.getElementById('3rd').value;
-
+            var x =Number(document.getElementById('1st').value);
+            var y = Number(document.getElementById('2nd').value);
+            var z = Number(document.getElementById('3rd').value);
             if(x > y && x > z){
 
                 document.getElementById('result').value = String(x + " is the greatest");
@@ -52,12 +50,12 @@
             else if(y > x && y > z){
                 document.getElementById('result').value = String(y + " is the greatest");
             }
-            else if(z > x && z > y){
+            else {
                 document.getElementById('result').value = String(z + " is the greatest");
             }
-        }
+         }
 
-    </script>
-  </center>
- </body>
+         </script>
+
+  </body>
 </html>
