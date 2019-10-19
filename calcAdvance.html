@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<title>Calculator</title>
+				<style>
+						body{
+								font-size:25px;
+								margin-top:150px;
+						}
+						table{
+								box-sizing:border-box;
+								width:200px;
+								height:300px;
+								border: black solid 2px;
+						}
+						input[type="button"]{
+								width:60px;
+								height:60px;
+								font-size:25px;
+								border:#3366ff solid 1px;
+						}
+						input[type="text"]{
+								width:97%;
+								height:60px;
+								font-size:25px;
+								background-color:white;
+								color:black;
+						}
+				</style>
+		</head>
+		<body>
+				<center>
+				<form name="calculator">
+				<table>
+						<tr>
+								<td colspan="4"><input name="expression" type="text" disabled="true"></td>
+						</tr>
+						<tr>
+								<td><input type="button" value="1" onclick="calculator.expression.value+='1'"></td>
+								<td><input type="button" value="2" onclick="calculator.expression.value+='2'"></td>
+								<td><input type="button" value="3" onclick="calculator.expression.value+='3'"></td>
+								<td><input type="button" value="+" onclick="calculator.expression.value+='+'"></td>
+						</tr>
+						<tr>
+								<td><input type="button" value="4" onclick="calculator.expression.value+='4'"></td>
+								<td><input type="button" value="5" onclick="calculator.expression.value+='5'"></td>
+								<td><input type="button" value="6" onclick="calculator.expression.value+='6'"></td>
+								<td><input type="button" value="-" onclick="calculator.expression.value+='-'"></td>
+						</tr>
+						<tr>
+								<td><input type="button" value="7" onclick="calculator.expression.value+='7'"></td>
+								<td><input type="button" value="8" onclick="calculator.expression.value+='8'"></td>
+								<td><input type="button" value="9" onclick="calculator.expression.value+='9'"></td>
+								<td><input type="button" value="*" onclick="calculator.expression.value+='*'"></td>
+						</tr>
+						<tr>
+								<td><input type="button" value="0" onclick="calculator.expression.value='0'"></td>
+								<td><input type="button" value="=" onclick="calculator.expression.value=eval(calculator.expression.value)"></td>
+								<td><input type="button" value="AC" onclick="calculator.expression.value=''"></td>
+								<td><input type="button" value="/" onclick="calculator.expression.value+='/'"></td>
+						</tr>
+				</table>
+				</form>
+				</center>
+		</body>
+</html>

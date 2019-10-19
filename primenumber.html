@@ -10,32 +10,37 @@
     <center>
     <fieldset id="prime" >
         Enter the number you wish :<input type="number" id="var4" name="var4" placeholder="Enter a positive number : "><br/>
-        Result : <input type="text" name="primeresult" id="primeresult" placeholder="Result of prime"><br/>
+        <br>
+        Result : <input type="text" id="primeresult" placeholder="Result of prime" readonly><br/>
+        <br>
         <button type="button" onclick='prime()'>Click to check</button>
     </fieldset>
-    
+
 
     <script>
-    
+
         function prime(){
             var a = Number(document.getElementById('var4').value);
-            if(a == 1 || a == 2){
+            if(a == 1 )
+            {
+                document.getElementById('primeresult').value = String(a + " is a prime number.");
+            }
+            else if(a == 2){
                 document.getElementById('primeresult').value = String(a + " is a prime number.");
             }
             else{
-
-            for(i = 2;i = a;i++){
-                if(a%i == 0){
-                document.getElementById('primeresult').value = String(a + " is not a prime number");
-                }
-                else{
-                    document.getElementById('primeresult').value = String(a + " is a prime number.");
-                }
-            }
+               for(var i = 2; i < a; i++){
+                  if(a % i == 0){
+                  document.getElementById('primeresult').value = String(a + " is not a prime number");
+                  }
+                  else{
+                      document.getElementById('primeresult').value = String(a + " is a prime number.");
+                  }
+              }
         }
     }
     </script>
-    
+
     </center>
 </body>
 </html>
