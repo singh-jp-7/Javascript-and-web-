@@ -1,37 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Factorial Calculator</title>
-</head>
-<body>
-    <div id="layout">
-       Enter the number you wish: <input type ="number" id="num" name="num" placeholder="Enter the number you wish">
-        <button type="submit" onclick="factorial()" >Click to find factorial</button>
-        Result : <input type="number" id="result" name="result" placeholder="Result will be displayed here" readonly    >
-    </div>
-    <script>
-        function factorial()
-        {
-            var num =Number(document.getElementById("num").value);
-            if(num == 0 || num == 1)
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Factorial Calculator</title>
+    </head>
+    <body>
+        <center>
+        <div id="layout">
+        Enter the number you wish: <input type ="number" id="num" name="num" placeholder="Enter the number you wish"><br/><br/>
+            <button type="submit" onclick="factorial()" >Click to find factorial</button><br/><br/>
+            Result : <input type="number" id="result" name="result" placeholder="Result will be displayed here" readonly><br/><br/>
+        </div>
+        <script>
+            function factorial()
             {
-                return 1;
-            }
-            else{
-                var fact = 1;
-                for(var i = 1; i<=num; i++)
+                var num =Number(document.getElementById("num").value);
+                if(num == 0 || num == 1)
                 {
-                    fact = fact *(i);
+                    return 1;
                 }
-                document.getElementById("result").value = String(fact);
+                else{
+                    var fact = 1;
+                    for(var i = 1; i<=num; i++)
+                    {
+                        fact = fact *(i);
+                    }
+                    document.getElementById("result").value = String(fact);
+                }
+                
             }
-            
-        }
-        document.getElementById("result").value = factorial();
+            document.getElementById("result").value = factorial();
 
-    </script>
-</body>
-</html>
+        </script>
+        </center>
+    </body>
+    </html>
