@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #demo{
+            width: 25%;
+            padding: 20px;
+            border: brown solid 5px;
+        }
+        .demo{
+            width: 25%;
+            padding: 20px;
+            border:blue solid 5px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS inbuilt functions</title>
+</head>
+<body>
+    <center>
+    <p id="demo"></p>
+    <p id="url">Bingo !</p>
+    <div class="demo">
+        <input type="text" id="len" placeholder="Enter the string "><br/>
+        <button type="submit" onclick="len()">Click to find answer</button>
+    </div>
+    <p></p>
+    <script>
+        document.getElementById("demo").innerHTML = Math.PI;
+        function len()
+        {
+        var alen = document.getElementById("len").value;
+        var char = alen.length;
+        var x = document.URL;
+        document.getElementById("url").innerHTML = x;
+        window.alert("The no of characters entered is : "+ char)
+        document.getElementById("demo").style.color = "red";
+        }
+
+
+
+    </script>
+    </center>
+</body>
+</html>
